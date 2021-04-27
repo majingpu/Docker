@@ -15,11 +15,11 @@ jdk-8u291-linux-x64.tar.gz
 ```shell
 vim /data/dockerfile/Dockfile
 ```
-3.构建镜像\
+3.构建镜像
 ```shell
 docker build -f /data/dockerfile/Dockerfile -t tomcat01:v1.0 .
 ```
-4.启动镜像\
+4.启动镜像
 ```shell
 [root@VM-0-17-centos dockerfile]# docker run -d -p 9090:8080 -v /data/dockerfile/tomcat/webapps:/usr/local/apache-tomcat-9.0.45/webapps/test -v /data/dockerfile/tomcat/logs:/usr/local/apache-tomcat-9.0.45/logs --name test-tomcat tomcat01:v1.0
 8dd7815dc8b1e692476d8656a45eff625d1b334149f8388d9adc66c3cc88e406
